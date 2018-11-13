@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">S&amp;R Package Processing</string>
+
+    <string name="title_home">Home</string>
+    <string name="title_process">Process a Package</string>
+    <string name="title_checkout">Checkout a Package</string>
+    <string name="title_search">Search</string>
+
+    <string name="nav_title_home">Home</string>
+    <string name="nav_title_process">Process</string>
+    <string name="nav_title_checkout">Checkout</string>
+    <string name="nav_title_search">Search</string>
+
+</resources>
