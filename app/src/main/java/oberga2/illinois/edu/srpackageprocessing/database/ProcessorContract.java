@@ -25,25 +25,39 @@ public final class ProcessorContract {
      * Department of UIUC.
      */
     public static class Packages implements BaseColumns {
-        public static final String TABLE_NAME = "entry";
+        public static final String TABLE_NAME = "package_database";
         public static final String COLUMN_RECIPIENT_NAME = "recipient";
         public static final String COLUMN_ENTRY_DATE = "date";
         public static final String COLUMN_FIRM = "firm";
         public static final String COLUMN_COUNT = "count";
+        public static final String COLUMN_NOTES = "notes";
         public static final String COLUMN_PICKUP_NAME = "pickup_name";
         public static final String COLUMN_PICKUP_ID = "pickup_id";
         public static final String COLUMN_PICKUP_DATE = "pickup_date";
 
-        public static final String CREATE_TABLE = "CREATE TABLE IF NOT EXISTS " +
+        /*public static final String CREATE_TABLE = "CREATE TABLE IF NOT EXISTS " +
                 TABLE_NAME + " (" +
                 _ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
                 COLUMN_RECIPIENT_NAME + " TEXT, " +
                 COLUMN_ENTRY_DATE + " INTEGER, " +
                 COLUMN_FIRM + " TEXT, " +
                 COLUMN_COUNT + " INTEGER" +
+                COLUMN_NOTES + " TEXT, " +
                 COLUMN_PICKUP_NAME + " TEXT, " +
                 COLUMN_PICKUP_ID + " INTEGER, " +
-                COLUMN_PICKUP_DATE + " INTEGER, " +  ")";
+                COLUMN_PICKUP_DATE + " INTEGER, " +  ")";*/
+
+        public static final String CREATE_TABLE = "CREATE TABLE IF NOT EXISTS " +
+                TABLE_NAME + " (" +
+                _ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
+                COLUMN_RECIPIENT_NAME + " TEXT, " +
+                COLUMN_ENTRY_DATE + " TEXT, " +
+                COLUMN_FIRM + " TEXT, " +
+                COLUMN_COUNT + " TEXT, " +
+                COLUMN_NOTES + " TEXT, " +
+                COLUMN_PICKUP_NAME + " TEXT, " +
+                COLUMN_PICKUP_ID + " TEXT, " +
+                COLUMN_PICKUP_DATE + " TEXT" +  ")";
 
         private static final String DELETE_ENTRIES =
                 "DROP TABLE IF EXISTS " + Packages.TABLE_NAME;

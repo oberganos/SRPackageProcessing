@@ -11,4 +11,16 @@
     <string name="nav_title_checkout">Checkout</string>
     <string name="nav_title_search">Search</string>
 
+    <string name="process_recipient_title">Recipient*</string>
+    <string name="process_example_recipient">ex. Oliver Berganos</string>
+    <string name="process_firm_title">Firm*</string>
+    <string name="process_example_firm">ex. Sigma Aldrich</string>
+    <string name="process_date_title">Date*</string>
+    <string name="process_count_title">Count*</string>
+    <string name="process_example_date">ex. 11/22/2018</string>
+    <string name="process_example_count">ex. 2</string>
+    <string name="process_notes_title">Notes</string>
+    <string name="process_example_notes">ex. \'top of ramp\' or \'in fridge\'</string>
+    <string name="process_submit">Submit</string>
+
 </resources>

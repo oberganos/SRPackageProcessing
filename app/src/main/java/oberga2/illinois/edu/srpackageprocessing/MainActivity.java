@@ -17,7 +17,7 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
 
     /**
      * This is the main entry for this app. The Home fragment is displayed by default.
-     * 
+     *
      */
     @Override
     protected void onCreate(Bundle savedInstanceState) {

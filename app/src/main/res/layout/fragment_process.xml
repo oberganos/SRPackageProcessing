@@ -1,12 +1,157 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent" android:layout_height="match_parent">
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackground">
 
     <TextView
+        android:text="@string/process_recipient_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Process"
-        android:textColor="@color/colorBody"
-        android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true" />
+        android:textSize="20sp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="30dp"
+        android:textColor="@color/colorBody"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp">
+
+        <EditText
+            android:id="@+id/process_recipient_name"
+            android:hint="@string/process_example_recipient"
+            android:inputType="text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".10"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:textColor="@color/colorBody"
+            android:textColorHint="@color/inputTextHint"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:text="@string/process_firm_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="110dp"
+        android:textColor="@color/colorBody"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="140dp">
+
+        <EditText
+            android:id="@+id/process_firm"
+            android:hint="@string/process_example_firm"
+            android:inputType="text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".10"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:textColor="@color/colorBody"
+            android:textColorHint="@color/inputTextHint"
+            tools:ignore="HardcodedText" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="190dp">
+
+        <TextView
+            android:text="@string/process_date_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:layout_weight=".20"
+            android:layout_marginLeft="30dp"
+            android:textColor="@color/colorBody"/>
+
+        <TextView
+            android:text="@string/process_count_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:layout_weight=".20"
+            android:layout_marginLeft="80dp"
+            android:textColor="@color/colorBody"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="220dp">
+
+        <EditText
+            android:id="@+id/process_entry_date"
+            android:hint="@string/process_example_date"
+            android:inputType="date"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".700"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:textColor="@color/colorBody"
+            android:textColorHint="@color/inputTextHint"/>
+
+        <EditText
+            android:id="@+id/process_count"
+            android:hint="@string/process_example_count"
+            android:inputType="number"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".30"
+            android:layout_marginRight="30dp"
+            android:textColor="@color/colorBody"
+            android:textColorHint="@color/inputTextHint"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:text="@string/process_notes_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="270dp"
+        android:textColor="@color/colorBody"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="300dp">
+
+        <EditText
+            android:id="@+id/process_notes"
+            android:hint="@string/process_example_notes"
+            android:inputType="textMultiLine"
+            android:lines="4"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".10"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:textColor="@color/colorBody"
+            android:textColorHint="@color/inputTextHint"/>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/process_submit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="30dp"
+        android:text="@string/process_submit" />
+
 </RelativeLayout>
