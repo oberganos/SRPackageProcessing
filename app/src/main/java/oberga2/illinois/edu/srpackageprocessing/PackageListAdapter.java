@@ -7,8 +7,6 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.TextView;
 
-import org.w3c.dom.Text;
-
 import java.util.ArrayList;
 
 public class PackageListAdapter extends ArrayAdapter<Package> {
@@ -18,6 +16,17 @@ public class PackageListAdapter extends ArrayAdapter<Package> {
     Context currContext;
     int currResource;
 
+    TextView idTV;
+    TextView recipientTV;
+    TextView dateTV;
+
+    /**
+     * Constructor for the PackageListAdapter, which populates the list view with Package objects
+     *
+     * @param context conext
+     * @param resource resource
+     * @param objects objects to fill the listview with
+     */
     public PackageListAdapter(Context context, int resource, ArrayList<Package> objects) {
         super(context, resource, objects);
         currContext = context;
@@ -26,22 +35,28 @@ public class PackageListAdapter extends ArrayAdapter<Package> {
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
+        //get package information
         int id = getItem(position).getId();
         String recipient = getItem(position).getRecipient();
-        String firm = getItem(position).getFirm();
+        String date = getItem(position).getDate();
+        //String firm = getItem(position).getFirm();
+        //int count = getItem(position).getCount();
 
-        Package curr = new Package(id, recipient, firm);
+        //Package curr = new Package(id, recipient, date, firm, count);
 
         LayoutInflater inflater = LayoutInflater.from(currContext);
         convertView = inflater.inflate(currResource, parent, false);
 
-        TextView idTV = (TextView) convertView.findViewById(R.id.idTV);
-        TextView recipientTV = (TextView) convertView.findViewById(R.id.recipientTV);
-        TextView firmTV = (TextView) convertView.findViewById(R.id.firmTV);
+        //get the elements for the activity
+        idTV = (TextView) convertView.findViewById(R.id.idTV);
+        recipientTV = (TextView) convertView.findViewById(R.id.recipientTV);
+        dateTV = (TextView) convertView.findViewById(R.id.dateTV);
 
-        idTV.setText("" + id);
+        //set the text view text with package information
+        String packageId = "" + id;
+        idTV.setText(packageId);
         recipientTV.setText(recipient);
-        firmTV.setText(firm);
+        dateTV.setText(date);
 
         return convertView;
     }

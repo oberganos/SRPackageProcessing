@@ -39,21 +39,35 @@ public class HomeFragment extends Fragment {
 
         packagesLV = inflatedView.findViewById(R.id.packageListView);
 
-        ArrayList<Package> packages = new ArrayList<>();
-
-        Cursor data = dbHelper.getData();
-        while(data.moveToNext()) {
-            int id = data.getInt(0);
-            String recipient = data.getString(1);
-            String firm = data.getString(2);
-
-            Package currPackage = new Package(id, recipient, firm);
-            packages.add(currPackage);
-        }
+        ArrayList<Package> packages = getAllPackages();
 
         PackageListAdapter adapter = new PackageListAdapter(currActivity, R.layout.adapter_home_layout, packages);
         packagesLV.setAdapter(adapter);
 
         return inflatedView;
+    }
+
+    /**
+     * Get a list of packages that haven't been picked up yet.
+     *
+     * @return an ArrayList of packages that haven't been picked up yet
+     */
+    public ArrayList<Package> getAllPackages() {
+        final ArrayList<Package> packages = new ArrayList<>();
+
+        Cursor dbData = dbHelper.getData();
+        while(dbData.moveToNext()) {
+            int id = dbData.getInt(0);
+            String recipient = dbData.getString(1);
+            String date = dbData.getString(2);
+            String firm = dbData.getString(3);
+            int count = dbData.getInt(4);
+
+            Package currPackage = new Package(id, recipient, date, firm, count);
+            packages.add(currPackage);
+
+        }
+
+        return packages;
     }
 }

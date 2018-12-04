@@ -21,7 +21,7 @@
             android:textStyle="bold"
             android:textAppearance="?attr/textAppearanceListItem" />
 
-        <TextView android:id="@+id/firmTV"
+        <TextView android:id="@+id/dateTV"
             android:layout_width="match_parent"
             android:layout_height="30dp"
             android:paddingBottom="5dp"

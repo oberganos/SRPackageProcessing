@@ -96,4 +96,41 @@ public class ProcessorHelper extends SQLiteOpenHelper {
         Cursor data = db.rawQuery(query, null);
         return data;
     }
+
+    /**
+     * This function is used when a package is picked up. The user will fill out a checkout form with
+     * their information. The current package will be updated with the recipient's information.
+     *
+     * @param id the id of the package in the database
+     * @param pickupName name of the person picking the package up
+     * @param pickupID id of the person picking the package up
+     * @param pickupDate date the package was picked up
+     * @return TRUE if the package's pickup information was updated, FALSE if there was an error in
+     * the update
+     */
+    public boolean updateData(int id, String pickupName, String pickupID, String pickupDate) {
+        /*String query = "UPDATE " + ProcessorContract.Packages.TABLE_NAME +
+                " SET " + ProcessorContract.Packages.COLUMN_PICKUP_NAME + " = " + pickupName +
+                " AND " + ProcessorContract.Packages.COLUMN_PICKUP_ID + " = " + pickupID +
+                " AND " + ProcessorContract.Packages.COLUMN_PICKUP_DATE + " = " + pickupDate +
+                " WHERE ROWID = '" + id + "'";
+        Log.v(TAG, query);*/
+
+        SQLiteDatabase db = this.getWritableDatabase();
+
+        //create an object to hold all of the recipient's information
+        ContentValues contentValues = new ContentValues();
+        contentValues.put(ProcessorContract.Packages.COLUMN_PICKUP_NAME, pickupName);
+        contentValues.put(ProcessorContract.Packages.COLUMN_PICKUP_ID, pickupID);
+        contentValues.put(ProcessorContract.Packages.COLUMN_PICKUP_DATE, pickupDate);
+
+        long result = db.update(ProcessorContract.Packages.TABLE_NAME, contentValues, "_ID = " + id, null);
+        if(result == 1) {
+            //package info was updated successfully
+            return true;
+        } else {
+            //there was an error in the info update
+            return false;
+        }
+    }
 }
