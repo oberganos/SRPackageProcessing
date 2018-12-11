@@ -1,12 +1,215 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent" android:layout_height="match_parent">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackground">
+
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Search"
+        android:layout_marginStart="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="30dp"
+        android:textSize="20sp"
         android:textColor="@color/colorBody"
-        android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true" />
+        android:text="@string/search_search_from" />
+
+    <RadioGroup
+        android:id="@+id/search_radio_group"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="70dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp">
+
+        <android.support.v7.widget.AppCompatRadioButton
+            android:id="@+id/search_all"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:buttonTint="@color/colorBody"
+            android:textColor="@color/colorBody"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+            android:textAlignment="center"
+            android:checked="true"
+            android:text="@string/search_all_packages" />
+
+        <android.support.v7.widget.AppCompatRadioButton
+            android:id="@+id/search_pending"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:buttonTint="@color/colorBody"
+            android:textColor="@color/colorBody"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+            android:textAlignment="center"
+            android:text="@string/search_pending_packages" />
+
+        <android.support.v7.widget.AppCompatRadioButton
+            android:id="@+id/search_checked_out"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:buttonTint="@color/colorBody"
+            android:textColor="@color/colorBody"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+            android:textAlignment="center"
+            android:text="@string/search_checked_out_packages" />
+
+    </RadioGroup>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="200dp"
+        android:textSize="20sp"
+        android:textColor="@color/colorBody"
+        android:text="@string/search_with_the_following" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="240dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="70"
+            android:textSize="16sp"
+            android:textAlignment="center"
+            android:textColor="@color/colorBody"
+            android:text="@string/search_recipient" />
+
+        <EditText
+            android:id="@+id/search_recipient"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:padding="10dp"
+            android:textSize="16sp"
+            android:layout_weight="30"
+            android:textColor="@color/colorBody"
+            android:hint="ex. Oliver"
+            android:textColorHint="@color/colorAccent"
+            android:backgroundTint="@color/colorBody"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="280dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:textAlignment="center"
+            android:layout_weight="70"
+            android:textColor="@color/colorBody"
+            android:text="@string/search_firm" />
+
+        <EditText
+            android:id="@+id/search_firm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="30"
+            android:inputType="text"
+            android:padding="10dp"
+            android:textColor="@color/colorBody"
+            android:hint="ex. MCM"
+            android:textColorHint="@color/colorAccent"
+            android:backgroundTint="@color/colorBody"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="320dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:textAlignment="center"
+            android:layout_weight="70"
+            android:textColor="@color/colorBody"
+            android:text="@string/search_date" />
+
+        <EditText
+            android:id="@+id/search_date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="30"
+            android:inputType="date"
+            android:padding="10dp"
+            android:textColor="@color/colorBody"
+            android:textColorHint="@color/colorAccent"
+            android:hint="ex. 12/10/2018"
+            android:backgroundTint="@color/colorBody"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="370dp"
+        android:textSize="20sp"
+        android:textColor="@color/colorBody"
+        android:text="@string/search_or" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="400dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:textAlignment="center"
+            android:layout_weight="70"
+            android:textColor="@color/colorBody"
+            android:text="@string/search_package_id" />
+
+        <EditText
+            android:id="@+id/search_id"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="30"
+            android:inputType="number"
+            android:textColor="@color/colorBody"
+            android:padding="10dp"
+            android:hint="ex. 10"
+            android:textColorHint="@color/colorAccent"
+            android:backgroundTint="@color/colorBody"/>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/search_submit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="30dp"
+        android:text="@string/search_advanced_search" />
 </RelativeLayout>

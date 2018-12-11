@@ -19,6 +19,7 @@ public class PackageListAdapter extends ArrayAdapter<Package> {
     TextView idTV;
     TextView recipientTV;
     TextView dateTV;
+    TextView firmTV;
 
     /**
      * Constructor for the PackageListAdapter, which populates the list view with Package objects
@@ -39,7 +40,7 @@ public class PackageListAdapter extends ArrayAdapter<Package> {
         int id = getItem(position).getId();
         String recipient = getItem(position).getRecipient();
         String date = getItem(position).getDate();
-        //String firm = getItem(position).getFirm();
+        String firm = getItem(position).getFirm();
         //int count = getItem(position).getCount();
 
         //Package curr = new Package(id, recipient, date, firm, count);
@@ -51,12 +52,14 @@ public class PackageListAdapter extends ArrayAdapter<Package> {
         idTV = (TextView) convertView.findViewById(R.id.idTV);
         recipientTV = (TextView) convertView.findViewById(R.id.recipientTV);
         dateTV = (TextView) convertView.findViewById(R.id.dateTV);
+        firmTV = (TextView) convertView.findViewById(R.id.firmTV);
 
         //set the text view text with package information
         String packageId = "" + id;
         idTV.setText(packageId);
         recipientTV.setText(recipient);
         dateTV.setText(date);
+        firmTV.setText(firm);
 
         return convertView;
     }

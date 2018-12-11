@@ -8,14 +8,15 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="70dp"
+        android:layout_height="85dp"
         android:orientation="vertical"
         android:layout_weight="30"
-        android:paddingTop="5dp">
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp">
 
         <TextView android:id="@+id/recipientTV"
             android:layout_width="match_parent"
-            android:layout_height="30dp"
+            android:layout_height="25dp"
             android:gravity="center"
             android:textColor="@color/colorBody"
             android:textStyle="bold"
@@ -23,9 +24,16 @@
 
         <TextView android:id="@+id/dateTV"
             android:layout_width="match_parent"
-            android:layout_height="30dp"
-            android:paddingBottom="5dp"
+            android:layout_height="25dp"
             android:gravity="center"
+            android:textColor="@color/colorBody"
+            android:textAppearance="?attr/textAppearanceListItemSecondary" />
+
+        <TextView android:id="@+id/firmTV"
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            android:gravity="center"
+            android:textStyle="italic"
             android:textColor="@color/colorBody"
             android:textAppearance="?attr/textAppearanceListItemSecondary" />
 
@@ -33,7 +41,7 @@
 
     <TextView android:id="@+id/idTV"
         android:layout_width="match_parent"
-        android:layout_height="70dp"
+        android:layout_height="85dp"
         android:layout_weight="70"
         android:gravity="center"
         android:textColor="@color/colorBody"

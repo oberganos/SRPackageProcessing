@@ -1,6 +1,7 @@
 package oberga2.illinois.edu.srpackageprocessing;
 
 import android.content.Intent;
+import android.database.Cursor;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
@@ -71,6 +72,33 @@ public class CheckoutFormActivity extends AppCompatActivity {
 
         //set the listener for the submit button
         submitOnClickListenerWrapper();
+
+        //check if the package has been picked up yet
+        Cursor dbData = dbHelper.getData();
+        while(dbData.moveToNext()) {
+            //get current package data
+            int dbPackageId = dbData.getInt(0);
+
+            String checkoutRecipient = dbData.getString(6);
+            String checkoutId = dbData.getString(7);
+            String checkoutDate = dbData.getString(8);
+
+            if(dbPackageId == currPackageId) {
+                //check if the packaged has been picked up
+                if(checkoutRecipient.length() > 0) {
+                    //display the pickup info
+                    nameET.setText(checkoutRecipient);
+                    idET.setText(checkoutId);
+                    dateET.setText(checkoutDate);
+
+                    //disable form elements
+                    nameET.setEnabled(false);
+                    idET.setEnabled(false);
+                    dateET.setEnabled(false);
+                    submitButton.setVisibility(View.GONE);
+                }
+            }
+        }
     }
 
     /**

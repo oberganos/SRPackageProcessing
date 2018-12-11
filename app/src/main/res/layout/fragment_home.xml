@@ -4,11 +4,130 @@
     android:layout_height="match_parent"
     android:background="@color/colorBackground">
 
-    <ListView
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/packageListView"
-        android:scrollbarThumbVertical="@color/colorBody"
-        android:divider="@color/colorBody"
-        android:dividerHeight="2dp"/>
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginBottom="30dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="20dp"
+                android:text="@string/welcome"
+                android:textAlignment="center"
+                android:textColor="@color/colorBody"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="120dp"
+                android:text="@string/created_by"
+                android:textAlignment="center"
+                android:textColor="@color/colorBody"
+                android:textSize="20sp"
+                android:textStyle="italic" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="180dp"
+                android:text="@string/home_what_is_the_purpose"
+                android:textColor="@color/colorBody"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="200dp"
+                android:layout_marginRight="20dp"
+                android:text="@string/home_app_purpose"
+                android:textColor="@color/colorBody" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="350dp"
+                android:text="@string/home_why_is_this_better"
+                android:textColor="@color/colorBody"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="370dp"
+                android:layout_marginRight="20dp"
+                android:text="@string/home_why_this_is_better"
+                android:textColor="@color/colorBody" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="460dp"
+                android:text="@string/what_can_you_do"
+                android:textColor="@color/colorBody"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="480dp"
+                android:layout_marginRight="20dp"
+                android:text="@string/what_can_be_done"
+                android:textColor="@color/colorBody" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="560dp"
+                android:text="@string/how_does_this_work"
+                android:textColor="@color/colorBody"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="580dp"
+                android:layout_marginRight="20dp"
+                android:text="@string/how_it_works"
+                android:textColor="@color/colorBody" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="670dp"
+                android:text="@string/how_was_this_made"
+                android:textColor="@color/colorBody"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="690dp"
+                android:layout_marginRight="20dp"
+                android:text="@string/how_this_was_made"
+                android:textColor="@color/colorBody" />
+        </RelativeLayout>
+
+    </ScrollView>
 </RelativeLayout>

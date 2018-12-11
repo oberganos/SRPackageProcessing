@@ -35,39 +35,6 @@ public class HomeFragment extends Fragment {
         currActivity = getActivity();
         currActivity.setTitle(R.string.title_home);
 
-        dbHelper = new ProcessorHelper(currActivity);
-
-        packagesLV = inflatedView.findViewById(R.id.packageListView);
-
-        ArrayList<Package> packages = getAllPackages();
-
-        PackageListAdapter adapter = new PackageListAdapter(currActivity, R.layout.adapter_home_layout, packages);
-        packagesLV.setAdapter(adapter);
-
         return inflatedView;
-    }
-
-    /**
-     * Get a list of packages that haven't been picked up yet.
-     *
-     * @return an ArrayList of packages that haven't been picked up yet
-     */
-    public ArrayList<Package> getAllPackages() {
-        final ArrayList<Package> packages = new ArrayList<>();
-
-        Cursor dbData = dbHelper.getData();
-        while(dbData.moveToNext()) {
-            int id = dbData.getInt(0);
-            String recipient = dbData.getString(1);
-            String date = dbData.getString(2);
-            String firm = dbData.getString(3);
-            int count = dbData.getInt(4);
-
-            Package currPackage = new Package(id, recipient, date, firm, count);
-            packages.add(currPackage);
-
-        }
-
-        return packages;
     }
 }

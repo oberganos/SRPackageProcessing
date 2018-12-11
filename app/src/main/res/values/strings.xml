@@ -4,7 +4,7 @@
     <string name="title_home">Home</string>
     <string name="title_process">Process a Package</string>
     <string name="title_checkout">Checkout a Package</string>
-    <string name="title_search">Search</string>
+    <string name="title_search">Advanced Search</string>
 
     <string name="nav_title_home">Home</string>
     <string name="nav_title_process">Process</string>
@@ -22,5 +22,28 @@
     <string name="process_notes_title">Notes</string>
     <string name="process_example_notes">ex. \'top of ramp\' or \'in fridge\'</string>
     <string name="process_submit">Submit</string>
+    <string name="search_search_from">Search from:</string>
+    <string name="search_all_packages">all packages</string>
+    <string name="search_pending_packages">pending packages</string>
+    <string name="search_checked_out_packages">checked out packages</string>
+    <string name="search_with_the_following">With the following:</string>
+    <string name="search_recipient">Recipient:</string>
+    <string name="search_firm">Firm:</string>
+    <string name="search_date">Date:</string>
+    <string name="search_or">or:</string>
+    <string name="search_package_id">Package ID:</string>
+    <string name="search_advanced_search">Advanced Search</string>
+    <string name="home_why_this_is_better">Associates should be able to process packages more quickly and recipients should be able to pick them up faster. This app also makes the process paperless, which saves the department money.</string>
+    <string name="home_why_is_this_better">How is this app better than the old process?</string>
+    <string name="home_app_purpose">At the Operations and Receiving office of the UIUC Mechanical Engineering Department, the process for processing packages is unnecessarily tedious. The associate must label a package, fill out an entry in the package log book, and email the recipient. Once a person arrives to pick up a package, the associate must search for the package manually and hand over the package. This app aims to make the whole process more efficient.</string>
+    <string name="home_what_is_the_purpose">What is the purpose of this app?</string>
+    <string name="created_by">Created by Oliver Berganos</string>
+    <string name="welcome"><![CDATA[Welcome to the S&R Package Processing App!]]></string>
+    <string name="what_can_you_do">What can you do in this app?</string>
+    <string name="what_can_be_done">In this app, you can process a package, check out a package, and search for a package using keywords or package ID.</string>
+    <string name="how_does_this_work">How does this app work?</string>
+    <string name="how_it_works">When you process a package, its information is stored into a database in this app. Once the recipient picks up the package, the information for that package will update in the database, indicating that the package has been picked up.</string>
+    <string name="how_was_this_made">How was this app made?</string>
+    <string name="how_this_was_made">This app was developed in Android Studio. The languages used were Java, XML, and SQLite.</string>
 
 </resources>
